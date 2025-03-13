@@ -1,0 +1,403 @@
+body {
+  background-color: rgb(66, 65, 65);
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+.button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 5px 25px;
+  color: white;
+  font-weight: 200;
+
+  border: none;
+  background-color: rgba(158, 158, 158, 0.164);
+}
+.button-1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-out;
+}
+
+.button-1:hover::before {
+  transform: translateX(0);
+}
+
+.span {
+  z-index: 99;
+}
+/* =================================================== */
+.button-2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  transform: scale(0);
+  transition: transform 0.1s ease-out;
+}
+
+.button-2:hover::before {
+  transform: scale(1);
+}
+/* ================================ */
+.button-3 {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.button-3 .span-3 {
+  position: absolute;
+  inset: 0;
+}
+
+.button-3::before,
+.button-3::after,
+.button-3 .span-3::before,
+.button-3 .span-3::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-3::before {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: -100%;
+}
+
+.button-3::after {
+  width: 1px;
+  height: 100%;
+  right: 0;
+  top: -100%;
+}
+
+.button-3 .span-3::before {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  right: -100%;
+}
+
+.button-3 .span-3::after {
+  width: 1px;
+  height: 100%;
+  left: 0;
+  bottom: -100%;
+}
+
+.button-3:hover::before {
+  transform: translateX(100%);
+}
+
+.button-3:hover::after {
+  transform: translateY(100%);
+  transition-delay: 0.1s;
+}
+
+.button-3:hover .span-3::before {
+  transform: translateX(-100%);
+  transition-delay: 0.1s;
+}
+
+.button-3:hover .span-3::after {
+  transform: translateY(-100%);
+  transition-delay: 0.1s;
+}
+/* ===================================================== */
+.button-4 {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.button-4 .span-4 {
+  position: absolute;
+  inset: 0;
+}
+
+.button-4::before,
+.button-4::after,
+.button-4 .span-4::before,
+.button-4 .span-4::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-4::before {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0%;
+  transform: scale(0);
+}
+
+.button-4::after {
+  width: 1px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  transform: scale(0);
+}
+
+.button-4 .span-4::before {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  right: 0;
+  transform: scale(0);
+}
+
+.button-4 .span-4::after {
+  width: 1px;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  transform: scale(0);
+}
+
+.button-4:hover::before {
+  transform: scale(1);
+}
+
+.button-4:hover::after {
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+.button-4:hover .span-4::before {
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+.button-4:hover .span-4::after {
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+/* ................................ */
+.button-5 {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background-color: rgba(158, 158, 158, 0.164);
+}
+
+.button-5::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  transform: scale(0);
+  transition: transform 0.2s ease-out;
+}
+
+.button-5:hover::before {
+  transform: scale(1);
+}
+/* =================================== */
+.button-6 {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s;
+}
+
+.button-6::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  bottom: -100%;
+  right: -100%;
+  z-index: -1;
+  transition: bottom 0.4s, right 0.4s;
+}
+
+.button-6:hover::before {
+  bottom: 0;
+  right: 0;
+}
+
+.button-6:hover {
+  color: black;
+}
+/* ======================================= */
+.button-7 {
+  position: relative;
+  overflow: hidden;
+}
+.button-7::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  transform: translateX(-100%);
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  transition: transform 0.3s ease;
+}
+
+.button-7:hover::after {
+  transform: translateX(0);
+}
+
+.button-7::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  transform: translateX(+100%);
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  transition: transform 0.3s ease;
+}
+
+.button-7:hover::before {
+  transform: translateX(0);
+}
+/* ============================================= */
+.button-8 {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: black;
+  }
+}
+.button-8::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translateY(-110%);
+  transition: transform 0.3s ease;
+  background: linear-gradient(90deg, #00ffee, #8000ff);
+  z-index: -1;
+}
+.button-8:hover::after {
+  transform: translate(0);
+}
+/* ========================================= */
+.button-9 {
+  color: #333;
+
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease, background-color 0.4s ease;
+}
+
+.button-9::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: #00ffee;
+  transition: width 0.5s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.button-9:hover {
+  color: #333;
+}
+
+.button-9:hover::before {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+
+/* =================================== */
+
+.button-10 {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.button-10::before,
+.button-10::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #00ffee, #00c3ff, #00ffee);
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+}
+.button-10::before {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.button-10::after {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.button-10 span {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.button-10:hover {
+  color: #333;
+}
+
+.button-10:hover::before {
+  transform: translateX(0);
+}
+
+.button-10:hover::after {
+  transform: translateX(0);
+}
+
+.button-10:hover span {
+  transform: translateY(-5px);
+}
